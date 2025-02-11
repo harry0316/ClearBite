@@ -4,20 +4,20 @@ ClearBite
 
 ## Overview
 
-ClearBite helps users find specific ingredients in food products by searching barcodes or product name. It’s designed for seniors, kids, and individuals with food restrictions to easily check if a product is safe to eat.
+ClearBite helps users find specific ingredients in food products by searching barcodes or product names. It’s designed for seniors, kids, and individuals with food restrictions to easily check if a product is safe to eat.
 
 ### Problem Space
 
-When I moved to Canada, I noticed that ingredient information on food packaging is written in very small letters. This is because companies are required by law to provide nutrition details in both English and French in Canada.
+When I moved to Canada, I noticed that ingredient information on food packaging was written in very small letters. This is because companies are required by law to provide nutrition details in both English and French in Canada.
 Checking ingredients on every product is challenging and time-consuming, especially for those with dietary restrictions or vision difficulties.
 
 ### User Profile
 
-ClearBite is designed for individuals with vision difficulties, such as seniors and kids, as well as people with dietary restrictions, including those who follow halal, vegetarian, or vegan diets, or have minor food allergies.
+ClearBite is designed for individuals with vision difficulties, such as seniors and kids, as well as people with dietary restrictions, including those who follow halal, vegetarian, or vegan diets or have minor food allergies.
 
 ### Features
 
-・Sign up and log in function
+・Sign up and login function
 ・Searching function with option
 ・Function to see result showing if the ingredient is contained or not
 ・Saving function for the result
@@ -36,7 +36,7 @@ The Google Images Search API or Walmart API
 
 ### Sitemap
 
-List the pages of your app with brief descriptions. You can show this visually, or write it out.
+List the pages of your app with brief descriptions. You can show this visually or write it out.
 
 ・Sign Up / Log In Page – Users can create an account and input their dietary preferences or restrictions for a more personalized search experience.
 ・Search Page – Users can search for products by typing the product name or entering a barcode to check ingredient details.
@@ -52,7 +52,7 @@ https://www.canva.com/design/DAGeMyz6ucw/8PwuJ7P4YQdsFUinsFbSvA/edit?utm_content
 
 ### Endpoints
 
-Get product info, conditions for searching
+Get product info conditions for searching
 
 ## Roadmap
 
@@ -68,6 +68,6 @@ Before starting
 
 ## Future Implementations
 
-expand to smartPhone using ReactNative or using PWA
+Expand to smartPhone using ReactNative or using PWA
 (Progressive Web App) to make the app look like a mobile app.
 Apply the Barcode reader function
