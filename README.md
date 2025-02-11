@@ -52,13 +52,12 @@ https://www.canva.com/design/DAGeMyz6ucw/8PwuJ7P4YQdsFUinsFbSvA/edit?utm_content
 
 ### Endpoints
 
-Get for product info, condition for searching
+Get product info, conditions for searching
 
 ## Roadmap
 
 Before starting
-・Design wireframes for each page (including font,color)
-・Define condition / create json file
+・Design wireframes for each page (including font, colour)
 ・Organize data set for this project (current data: 3GB)
 ・create database relation design
 
@@ -70,5 +69,5 @@ Before starting
 ## Future Implementations
 
 expand to smartPhone using ReactNative or using PWA
-(Progressive Web App) to make app look like mobile app.
-Apply Barcode reader function
+(Progressive Web App) to make the app look like a mobile app.
+Apply the Barcode reader function
