@@ -1,6 +1,5 @@
 import "./LoginPage.scss";
 import axios from "axios";
-import SignupPage from "../SignupPage/SignupPage";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
