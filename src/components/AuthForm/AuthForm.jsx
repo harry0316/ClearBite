@@ -4,8 +4,8 @@ import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import barcode from "../../assets/icons/barcode.svg";
 import logo from "../../assets/logos/CLEARBITE_logo.svg";
-import LoginPage from "../../Pages/LoginPage/LoginPage";
-import SignupPage from "../../Pages/SignupPage/SignupPage";
+import LoginPage from "../../pages/LoginPage/LoginPage";
+import SignupPage from "../../pages/SignupPage/SignupPage";
 
 function AuthForm() {
   const location = useLocation();
