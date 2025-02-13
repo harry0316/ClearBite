@@ -1,0 +1,79 @@
+@use "../../styles/partials/fonts" as *;
+@use "../../styles/partials/global" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+.login {
+  &__input--form {
+    background-color: $main-ivory;
+    color: $main-green;
+    border-radius: 1.5625rem 1.5625rem 0 0;
+    height: 100vh;
+  }
+
+  &__wrapper {
+    padding: 1.5rem 1.875rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__input--title {
+    margin-bottom: 1.5rem;
+    margin-left: 1.5rem;
+    font-size: 1.5625rem;
+    line-height: 1.75rem;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+
+  &__label {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__input {
+    border: solid 0.0625rem $sub-gray;
+    border-radius: 1.25rem;
+    margin-bottom: 2rem;
+    padding: 0.5rem 1rem;
+    width: 80%;
+
+    &::placeholder {
+      background-color: $white;
+    }
+  }
+
+  &__button {
+    width: 80%;
+    border-radius: 1.25rem;
+    background-color: $main-green;
+    border: none;
+    color: $white;
+    padding: 0.5rem 1rem;
+
+    &:hover {
+      border: solid 0.0625rem $main-green;
+      background-color: $white;
+      color: $main-green;
+    }
+  }
+
+  &__link {
+    margin-top: 2rem;
+    font-size: 0.6875rem;
+    line-height: 1rem;
+    text-align: center;
+    color: $graphite;
+  }
+
+  &__href {
+    color: $main-green;
+    font-weight: 600;
+    padding-left: 0.25rem;
+  }
+}
