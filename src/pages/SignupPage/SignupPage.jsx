@@ -1,7 +1,7 @@
 import "./SignupPage.scss";
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 const API_URL = import.meta.env.VITE_API_URL;
 
 function SignupPage() {
@@ -14,6 +14,9 @@ function SignupPage() {
   const [usernameError, setUsernameError] = useState("");
   const [passwordError, setPasswordError] = useState("");
   const [confirmedPassError, setConfirmedPassError] = useState("");
+
+  //use navigate
+  const navigate = useNavigate();
 
   const handleChangeUserName = (e) => {
     setUsername(e.target.value);
@@ -58,11 +61,7 @@ function SignupPage() {
       return;
     }
 
-    try {
-      const result = await axios.post(`${API_URL}`);
-    } catch (e) {
-      console.log("can not add your information:", e);
-    }
+    navigate("/setting", { state: { username, password } });
   };
 
   return (

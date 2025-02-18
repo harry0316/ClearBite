@@ -12,8 +12,8 @@ function App() {
           <Route path="/" element={<AuthForm />} />
           <Route path="/login" element={<AuthForm />} />
           <Route path="/signup" element={<AuthForm />} />
-          <Route path="/setting" element={<IngredientsSetting />} />
-          <Route path="/" element={<HomePage />} />
+          <Route path="/setting" element={<AuthForm />} />
+          <Route path="/homepage" element={<HomePage />} />
         </Routes>
       </main>
     </BrowserRouter>
