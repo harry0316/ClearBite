@@ -1,0 +1,75 @@
+@use "../../styles/partials/fonts" as *;
+@use "../../styles/partials/global" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+/* Position and sizing of burger button */
+.bm-burger-button {
+  left: initial;
+  right: 2.25rem;
+  position: fixed;
+  width: 2.25rem;
+  height: 1.875rem;
+  top: 1.5625rem;
+}
+
+/* Color/shape of burger icon bars */
+.bm-burger-bars {
+  background: $white;
+}
+
+/* Position and sizing of clickable cross button */
+.bm-cross-button {
+  height: 24px;
+  width: 24px;
+}
+
+/* Color/shape of close button cross */
+.bm-cross {
+  background: $white;
+}
+
+/*
+Sidebar wrapper styles
+Note: Beware of modifying this element as it can break the animations - you should not need to touch it in most cases
+*/
+.bm-menu-wrap {
+  width: 12.5rem !important;
+  position: fixed;
+  height: 100%;
+}
+
+/* General sidebar styles */
+.bm-menu {
+  background: #1d9fad;
+  opacity: 0.9;
+  padding: 2.5rem 1rem;
+  font-size: 1.25rem;
+}
+
+/* Wrapper for item list */
+.bm-item-list {
+  color: #b8b7ad;
+  padding: 0.8em;
+}
+
+/* Individual item */
+.bm-item {
+  display: inline-block;
+}
+
+/* Styling of overlay */
+.bm-overlay {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.menu-item {
+  display: flex;
+  color: $white;
+  padding-bottom: 0.5rem;
+}
+
+.icon {
+  filter: invert(100%) sepia(0%) saturate(1%) hue-rotate(200deg)
+    brightness(108%) contrast(101%);
+}
