@@ -6,10 +6,12 @@ import barcode from "../../assets/icons/barcode.svg";
 import logo from "../../assets/logos/CLEARBITE_logo.svg";
 import LoginPage from "../../pages/LoginPage/LoginPage";
 import SignupPage from "../../pages/SignupPage/SignupPage";
+import IngredientsSetting from "../../pages/IngredientsSetting/IngredientsSetting";
 
 function AuthForm() {
   const location = useLocation();
-  const isLogin = location.pathname === "/login" || location.pathname === "/";
+  const locationPath = location.pathname;
+  //  === "/login" || location.pathname === "/";
 
   return (
     <section className="authForm">
@@ -29,8 +31,14 @@ function AuthForm() {
           <h2 className="authForm__subtitle">Welcome to ClearBite</h2>
         </div>
       </div>
-      {/* Conditionally render LoginPage or SignupPage */}
-      {isLogin ? <LoginPage /> : <SignupPage />}
+      {/* Conditionally render LoginPage, SignupPage,IngredientsSetting  */}
+      {locationPath === "/login" || locationPath === "/" ? (
+        <LoginPage />
+      ) : locationPath === "/setting" ? (
+        <IngredientsSetting />
+      ) : (
+        <SignupPage />
+      )}
     </section>
   );
 }
