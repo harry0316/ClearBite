@@ -2,7 +2,7 @@ import "./App.scss";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import AuthForm from "./components/AuthForm/AuthForm";
 import IngredientsSetting from "./pages/IngredientsSetting/IngredientsSetting";
-import HomePage from "./pages/HomePage/Home";
+import HomePage from "./pages/HomePage/HomePage";
 
 function App() {
   return (
