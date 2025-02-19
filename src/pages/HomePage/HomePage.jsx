@@ -88,6 +88,7 @@ function HomePage() {
                   to={{
                     pathname: `/product/${item.fdc_id}`,
                     state: { productData: item },
+                    id: { id },
                   }}
                   className="home__item--title"
                 >
