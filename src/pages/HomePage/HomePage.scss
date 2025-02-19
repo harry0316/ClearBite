@@ -5,7 +5,7 @@
 
 .home {
   text-align: center;
-  height: 100vh;
+  height: 100%;
   margin: 0 1.5rem;
 
   &__container {
@@ -69,9 +69,8 @@
   }
 
   &__result {
-    margin-top: 1.5rem;
-    background-color: $main-ivory;
-    border-radius: 1.5625rem;
+    min-height: 100vh;
+    overflow: auto;
   }
 
   &__error {
@@ -83,5 +82,26 @@
     line-height: 1rem;
     color: $sub-red;
     background-color: $white;
+  }
+
+  &__list {
+    min-height: 100%;
+    padding-bottom: 3.125rem;
+  }
+
+  &__item {
+    margin-top: 1rem;
+    padding: 0.5rem;
+    background-color: $main-ivory;
+    border-radius: 1.5625rem;
+
+    text-align: left;
+    &--title {
+    padding-left: .5rem;
+      text-decoration: none;
+      color: $main-green;
+      font-size: 0.8125rem;
+      line-height: 1.25rem;
+    }
   }
 }

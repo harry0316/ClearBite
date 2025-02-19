@@ -2,12 +2,14 @@ import "./HomePage.scss";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
-const API_URL = import.meta.env.VITE_API_URL;
+const API_URL = "http://localhost:8080";
 import Header from "../../components/Header/Header";
+import DetailPage from "../DetailPage/DetailPage";
 
 function HomePage() {
   //state
   const [input, setInput] = useState("");
+  const [result, setResult] = useState([]);
   const [error, setError] = useState("");
 
   //userId fetching from ingredientsSetting
@@ -25,6 +27,7 @@ function HomePage() {
       setError("Please type UPC code or Products Name");
       return false;
     }
+    return true;
   };
 
   const handleSubmit = async (e) => {
@@ -33,7 +36,16 @@ function HomePage() {
       return;
     }
     try {
-      const { data } = await axios.get();
+      const { data } = await axios.get(`${API_URL}/api/brandedfood/search`, {
+        params: { query: input },
+      });
+
+      if (!data || !Array.isArray(data) || data.length === 0) {
+        setError("No matching food found");
+        setResult([]);
+        return;
+      }
+      setResult(data);
       setError("");
     } catch (e) {
       console.error("can not search the product", e);
@@ -68,9 +80,21 @@ function HomePage() {
       {error && <p className="home__error">{error}</p>}
       <div className="home__result">
         <div className="home__list">
-          <div className="home__item">procuts 1</div>
-          <div className="home__item">procuts 2</div>
-          <div className="home__item">procuts 3</div>
+          {Array.isArray(result) &&
+            result.length > 0 &&
+            result.map((item, index) => (
+              <div className="home__item" key={item.fdc_id}>
+                <Link
+                  to={{
+                    pathname: `/product/${item.fdc_id}`,
+                    state: { productData: item },
+                  }}
+                  className="home__item--title"
+                >
+                  {index + 1} : {item.description}
+                </Link>
+              </div>
+            ))}
         </div>
       </div>
     </section>
