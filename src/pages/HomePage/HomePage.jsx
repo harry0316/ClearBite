@@ -14,7 +14,7 @@ function HomePage() {
 
   //userId fetching from ingredientsSetting
   const location = useLocation();
-  const { id } = location.state || {};
+  const { currentId } = location.state || {};
 
   //set Input
   const handleChangeInput = (e) => {
@@ -57,45 +57,47 @@ function HomePage() {
       <Header />
       <div className="home__container">
         <h2 className="home__title">What food would you like to search for?</h2>
-      </div>
-      <form className="home__form">
-        <label className="home__label">
-          <input
-            id="input"
-            name="input"
-            className="home__input"
-            type="text"
-            placeholder="Type UPC code or Product Name"
-            value={input}
-            onChange={handleChangeInput}
-          />
-        </label>
-        <button
-          className="home__submit"
-          type="submit"
-          aria-label="Search"
-          onClick={handleSubmit}
-        ></button>
-      </form>
-      {error && <p className="home__error">{error}</p>}
-      <div className="home__result">
-        <div className="home__list">
-          {Array.isArray(result) &&
-            result.length > 0 &&
-            result.map((item, index) => (
-              <div className="home__item" key={item.fdc_id}>
-                <Link
-                  to={{
-                    pathname: `/product/${item.fdc_id}`,
-                    state: { productData: item },
-                    id: { id },
-                  }}
-                  className="home__item--title"
+
+        <form className="home__form">
+          <label className="home__label">
+            <input
+              id="input"
+              name="input"
+              className="home__input"
+              type="text"
+              placeholder="Type UPC code or Product Name"
+              value={input}
+              onChange={handleChangeInput}
+            />
+          </label>
+          <button
+            className="home__submit"
+            type="submit"
+            aria-label="Search"
+            onClick={handleSubmit}
+          ></button>
+        </form>
+        {error && <p className="home__error">{error}</p>}
+        <div className="home__result">
+          <div className="home__list">
+            {Array.isArray(result) &&
+              result.length > 0 &&
+              result.map((item, index) => (
+                <div
+                  className="home__item"
+                  key={item.fdc_id}
+                  style={{ animationDelay: `${index * 0.1}s` }}
                 >
-                  {index + 1} : {item.description}
-                </Link>
-              </div>
-            ))}
+                  <Link
+                    to={`/detail/${item.fdc_id}`}
+                    state={{ productData: item, id: currentId }}
+                    className="home__item--title"
+                  >
+                    {index + 1} : {item.description}
+                  </Link>
+                </div>
+              ))}
+          </div>
         </div>
       </div>
     </section>

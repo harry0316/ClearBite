@@ -4,12 +4,14 @@
 
 .header {
   border-bottom: solid 0.0625rem $white;
-  margin: 0 -1.5rem;
-  padding: 0 1.5rem;
 
   &__container {
     display: flex;
     justify-content: space-between;
+  }
+
+  &__left {
+    padding-left: 1rem;
   }
 
   &__logo {
