@@ -106,7 +106,11 @@ function IngredientsSetting() {
       if (result.status === 200) {
         alert("Register account successfully!");
         const currentId = result.data[0].id;
-        navigate("/homePage", { state: { currentId } });
+
+        // Store userId in sessionStorage
+        sessionStorage.setItem("userId", currentId);
+
+        navigate("/homePage");
       }
     } catch (e) {
       console.error(e);
