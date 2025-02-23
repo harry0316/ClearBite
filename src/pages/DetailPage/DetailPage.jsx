@@ -83,7 +83,7 @@ function DetailPage() {
         `${API_URL}/api/favorite`,
         {
           userId,
-          preference: productData.gtin_upc,
+          gtin_upc: productData.gtin_upc,
         },
         {
           headers: {
@@ -92,7 +92,8 @@ function DetailPage() {
         }
       );
 
-      if (result === 200) {
+      console.log(result);
+      if (result.status === 200) {
         alert("Add to Favorite successfully!");
       }
     } catch (e) {
