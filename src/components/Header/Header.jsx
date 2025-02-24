@@ -10,7 +10,9 @@ function Header() {
     <section className="header">
       <div className="header__container">
         <div className="header__left">
-          <img src={logo} alt="clearBite logo" className="header__logo" />
+          <Link to="/homepage">
+            <img src={logo} alt="clearBite logo" className="header__logo" />
+          </Link>
         </div>
         <div className="header__right">
           <Burger />

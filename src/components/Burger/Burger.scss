@@ -11,6 +11,10 @@
   width: 2.25rem;
   height: 1.875rem;
   top: 1.5625rem;
+
+  @include tablet {
+    right: 30rem;
+  }
 }
 
 /* Color/shape of burger icon bars */

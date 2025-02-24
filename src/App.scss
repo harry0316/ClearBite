@@ -3,6 +3,13 @@
 @use "./styles/partials/mixins" as *;
 @use "./styles/partials/variables" as *;
 
-.main {
+html {
   background-color: $main-green;
+}
+
+.main {
+  @include desktop {
+    width: 40%;
+    margin: 0 auto;
+  }
 }
