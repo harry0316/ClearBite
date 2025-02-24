@@ -84,6 +84,7 @@ function DetailPage() {
         {
           userId,
           gtin_upc: productData.gtin_upc,
+          description: productData.description,
         },
         {
           headers: {
