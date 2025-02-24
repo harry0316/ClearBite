@@ -23,11 +23,11 @@ function DetailPage() {
       const result = await axios.get(`${API_URL}/api/barcode`, {
         params: { upc: productData.gtin_upc },
       });
-      console.log(result);
+
       const topImg = result.data.items?.[0]?.images?.[0] || no_img;
       setImg(topImg);
     } catch (e) {
-      console.log("Cannot get img from web API", e);
+      console.error("Cannot get img from web API", e);
     }
   };
 
@@ -43,7 +43,7 @@ function DetailPage() {
 
       setIngredients(targetList); // Update state
     } catch (e) {
-      console.log("Cannot get ingredients info", e);
+      console.error("Cannot get ingredients info", e);
     }
   };
 
@@ -94,7 +94,6 @@ function DetailPage() {
         }
       );
 
-      console.log(result);
       if (result.status === 200) {
         alert("Add to Favorite successfully!");
       }
