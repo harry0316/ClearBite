@@ -24,7 +24,7 @@
   }
 
   &__title {
-    padding: 1rem 0;
+    padding: 1rem 0.5rem;
     font-size: 1.125rem;
     line-height: 1.75rem;
   }
@@ -74,9 +74,8 @@
     border: solid 0.1563rem $sub-red;
   }
 
-  &__link{
-  display: inline-block;
-  font-size: .8125rem;
-  
+  &__link {
+    display: inline-block;
+    font-size: 0.8125rem;
   }
 }

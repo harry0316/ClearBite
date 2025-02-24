@@ -4,7 +4,6 @@ import { useEffect, useState } from "react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 const API_URL = "http://localhost:8080";
 import Header from "../../components/Header/Header";
-import DetailPage from "../DetailPage/DetailPage";
 
 function HomePage() {
   //state
@@ -14,7 +13,7 @@ function HomePage() {
 
   //userId fetching from ingredientsSetting
   const location = useLocation();
-  const { currentId } = location.state || {};
+  const userId = sessionStorage.getItem("userId");
 
   //set Input
   const handleChangeInput = (e) => {
@@ -90,7 +89,7 @@ function HomePage() {
                 >
                   <Link
                     to={`/detail/${item.fdc_id}`}
-                    state={{ productData: item, id: currentId }}
+                    state={{ productData: item }}
                     className="home__item--title"
                   >
                     {index + 1} : {item.description}
