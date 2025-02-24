@@ -29,12 +29,12 @@ class Burger extends React.Component {
             <Link to="/homepage" className="menu-item">
               Home Page
             </Link>
-            <a id="about" className="menu-item" href="/about">
+            <Link to="/favorite" className="menu-item">
               My favorite
-            </a>
-            <a id="about" className="menu-item" href="/about">
+            </Link>
+            <Link to="/homepage" className="menu-item">
               Setting
-            </a>
+            </Link>
           </main>
         </Menu>
       </div>

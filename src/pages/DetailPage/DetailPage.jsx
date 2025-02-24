@@ -23,10 +23,11 @@ function DetailPage() {
       const result = await axios.get(`${API_URL}/api/barcode`, {
         params: { upc: productData.gtin_upc },
       });
+      console.log(result);
       const topImg = result.data.items?.[0]?.images?.[0] || no_img;
       setImg(topImg);
     } catch (e) {
-      console.log("Cannot get img from web API");
+      console.log("Cannot get img from web API", e);
     }
   };
 

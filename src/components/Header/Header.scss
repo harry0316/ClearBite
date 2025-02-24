@@ -4,6 +4,10 @@
 
 .header {
   border-bottom: solid 0.0625rem $white;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: $main-green;
 
   &__container {
     display: flex;
